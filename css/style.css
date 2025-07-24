@@ -56,7 +56,7 @@ nav ul li a {
     color: var(--color-text);
 }
 
-/* ----- MAIN ----- */
+/* ----- MAIN PAGE HOME ----- */
 /* --- SECTION INTRODUCCIÓN --- */
 .intro {
     display: flex;
@@ -147,6 +147,59 @@ nav ul li a {
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0px 1px 14px 0px rgb(0 0 0 / 80%);
+}
+
+/* ------ MAIN PAGE ABOUT ------ */
+/* --- SECTION PROFILE --- */
+.profile {
+    background-color: var(--color-enfasis1);
+    margin: 25px;
+    padding: 10px;
+    border-radius: 30px;
+}
+.profile h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 15px;
+}
+.foto {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 0px 0%;
+    margin: 15px;
+    border: 5px dotted var(--color-enfasis2);
+}
+.profile_description {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    justify-items: center;
+}
+.profile_description p {
+    font-size: large;
+}
+
+/* --- SECTION HOBBIES --- */
+.hobbies {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px 50px;
+    font-size: large;
+}
+.hobbies h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 15px;
+}
+.hobbies p {
+    padding: 10px 0;
+}
+.list_hobbies {
+    list-style-image: url(../img/icono_lista.svg);
+    list-style-position: inside;
 }
 
 /* ------ FOOTER ------ */
