@@ -47,28 +47,55 @@
       </nav>
     </header>
     <main>
-        <section class="profile">
-            <h2>How's it doing?</h2>
-            <div class="profile_description">
-                <img class="foto" src="./img/foto.jpg" alt="Foto de Daniela">
-                <p>My name is Daniela Fajardo, I'm a creative person who is enthusiastic about continuous learning, currently transitioning professionally to full stack web development. I adapt easily to new environments and programming languages, enjoy working in teams, and have a strong ability to manage my time and projects. I am committed to continuing to grow as a developer, providing innovative solutions, and learning every day to strengthen my technical and personal skills.</p>
-            </div>
-        </section>
-        <section class="hobbies">
-            <h2>Hobbies</h2>
-            <p>Some hobbies I love to do are:</p>
-            <ul class="list_hobbies">
-                <li>Drawing</li>
-                <li>Painting</li>
-                <li>Playing video games</li>
-                <li>Creating</li>
-                <li>Exercising</li>
-                <li>Solving puzzles</li>
-            </ul>
-        </section>
-        <div class="hire_me">
+      <section class="title">
+        <h2>Contact me</h2>
+        <p>If you want to contact me, please fill out the form below with your information and I will get back to you.</p>
+      </section>
+      <section class="formulario">
+        <form>
+          <label for="name">Name</label>
+          <br/>
+          <input
+            type="text"
+            name="name"
+            placeholder="Write your name"
+            required
+          />
+          <br/><br>
+          <label for="number">Phone number</label>
+          <br/>
+          <input
+            type="number"
+            name="number"
+            placeholder="Write your phone"
+            required
+          />
+          <br/><br>
+          <label for="mail">E-mail</label>
+          <br/>
+          <input
+            type="email"
+            name="mail"
+            placeholder="Write your e-mail"
+            required
+          />
+          <br/><br>
+          <label for="text">Write me something</label>
+          <br/>
+          <input class="descrip"
+            type="text"
+            name="text"
+            placeholder="Write something you want to tell me"
+          />
+          <br><br>
+          <button class="btn_send" type="submit">Send</button>
+        </form>
+      </section>
+      <div class="hire_me">
         <div class="icon">
-          <a href="./contact.html" class="contacto"><i class="fa-solid fa-message" style="color: #000000"></i></a>
+          <a href="" class="contacto"
+            ><i class="fa-solid fa-message" style="color: #000000"></i
+          ></a>
         </div>
         <div class="text_hire">
           <p>Hire me!</p>

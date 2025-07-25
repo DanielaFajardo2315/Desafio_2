@@ -207,6 +207,7 @@ nav ul li a {
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
 }
 .tarjeta {
     display: flex;
@@ -268,6 +269,53 @@ nav ul li a {
 }
 .languages:hover{
     transform: scale(1.2);
+}
+
+/* ------ MAIN CONTACT ------ */
+.title {
+    margin: 25px;
+    padding: 10px;
+}
+.title h2 {
+    font-size: 35px;
+    text-align: center;
+    padding: 15px;
+}
+.formulario {
+    display: flex;
+    justify-content: center;
+}
+form {
+    background-color: var(--color-enfasis1);
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+form:hover {
+    box-shadow: 10px 10px 20px black;
+}
+form input {
+    border-radius: 10px;
+    background-color: white;
+    padding: 2px;
+    width: 300px;
+    font-family: 'Luckiest Guy', sans-serif;
+}
+.descrip {
+    height: 200px;
+}
+.btn_send {
+    font-family: 'Luckiest Guy', sans-serif;
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: var(--color-enfasis1);
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;
+}
+.btn_send:hover {
+    background-color: var(--color-enfasis2);
 }
 
 /* ------ FOOTER ------ */
