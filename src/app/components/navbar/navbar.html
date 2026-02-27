@@ -1,0 +1,36 @@
+<div class="header_navbar">
+    <div class="icon_name">
+        <a routerLink="/">
+          <img src="assets/avatar.png" alt="Avatar de mujer" class="img_header" />
+        </a>
+        <h1>Daniela Fajardo</h1>
+      </div>
+      <nav>
+        <ul>
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/"
+              ><i class="bi bi-house-door-fill"></i>
+              <br />Home</a
+            >
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="/about"
+              ><i class="bi bi-person-badge"></i>
+              <br />About</a
+            >
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="/work">
+              <i class="bi bi-collection-fill"></i>
+              <br />Proyects
+            </a>
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="/languages">
+              <i class="bi bi-code-slash"></i>
+              <br />Programming <br />Languages
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>

@@ -1,0 +1,95 @@
+.header_navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-enfasis1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
+    position: sticky;
+    top: 5px;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0;
+}
+
+.icon_name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon_name a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.img_header {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: 0px 8%;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.icon_name a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border: 3px dotted var(--color-enfasis2);
+    border-radius: 50%;
+    animation: rotateBorder 40s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+    z-index: 3;
+}
+
+/* ANIMACIÓN DE BORDE ROTATORIO */
+@keyframes rotateBorder {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- BOTONES BARRA DE NAVEGACIÓN --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* ---- PESTAÑA ACTIVA ----- */
+nav ul li.active a {
+  color: var(--color-enfasis2);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-enfasis2);
+}
+
+nav ul li.active {
+  border-radius: 12px;
+}
