@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './work.css',
 })
 export class Work {
+  openFullscreen(event: MouseEvent) {
+    const video = event.target as HTMLVideoElement;
 
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    }
+  }
 }
