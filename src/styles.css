@@ -2,10 +2,11 @@
 
 :root {
     --font: 'Bhlingglers', sans-serif;
-    --color-fondo: #ABBBFD;
-    --color-enfasis1: #F3EDF7;
-    --color-enfasis2: #E348FF;
-    --color-text: black;
+    --color-fondo: #2d396a;
+    --color-enfasis1: #81c3bd;
+    --color-enfasis2: #684CA0;
+    --color-text: rgb(212, 212, 212);
+    --color-text-black: black;
 }
 
 * {

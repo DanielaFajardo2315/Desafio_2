@@ -12,6 +12,7 @@
     width: auto;
     margin: 15px;
     padding: 5px;
+    padding-bottom: 10px;
     border-radius: 30px;
     box-shadow: 2px 2px 30px black;
 }
@@ -83,4 +84,9 @@
 
 .button_repository:hover {
     background-color: var(--color-fondo);
+}
+
+.buttons_repository {
+    display: flex;
+    gap: 20px;
 }

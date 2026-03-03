@@ -10,14 +10,15 @@
 }
 
 .icon {
-    background-color: var(--color-enfasis1);
+    background-color: var(--color-enfasis2);
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 0px 1px 14px 0px rgb(0 0 0 / 80%);
+    /* box-shadow: 0px 1px 14px 0px rgb(0 0 0 / 80%); */
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: glowPulse 1s ease-in-out infinite alternate;
 }
 
 .icon i {
@@ -27,12 +28,23 @@
 }
 
 .text_hire {
-    background-color: var(--color-enfasis1);
+    background-color: var(--color-enfasis2);
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 0px 1px 14px 0px rgb(0 0 0 / 80%);
+    /* box-shadow: 0px 1px 14px 0px rgb(0 0 0 / 80%); */
+    animation: glowPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0px 1px 14px 4px var(--color-enfasis1);
+    }
+    100% {
+        box-shadow: 0px 1px 14px 4px var(--color-enfasis2);
+    }
 }
 
 .text_hire p {
     margin: 0;
+    color: var(--color-text);
 }

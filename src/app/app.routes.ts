@@ -11,6 +11,6 @@ export const routes: Routes = [
     { path: 'about', component: About, title: 'Sobre mi' },
     { path: 'contact', component: Contact, title: 'Contacto' },
     { path: 'languages', component: Languages, title: 'Lenguajes de programación' },
-    { path: 'work', component: Work, title: 'Proyectos' },
+    { path: 'projects', component: Work, title: 'Proyectos' },
     { path: '**', component: NotFound, title: 'Página no encontrada' },
 ];

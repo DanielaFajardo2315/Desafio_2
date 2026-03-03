@@ -60,12 +60,13 @@
 
 /* --- SECTION SKILLS --- */
 .skills {
-    background-color: var(--color-enfasis1);
+    /* background-color: var(--color-enfasis1); */
+    width: 75%;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 30px;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr;
 }
 
 .skill_bar {
@@ -76,11 +77,15 @@
 .progress {
     position: relative;
     width: 100%;
-    height: 20px;
+    height: 2rem;
     background-color: var(--color-fondo);
     border-radius: 15px;
     overflow: hidden;
     margin: 25px 0;
+    box-shadow:
+        0 0 4px var(--color-enfasis1),
+        0 0 10px var(--color-enfasis1),
+        0 0 25px var(--color-enfasis1);
 }
 
 .progress span {
@@ -92,6 +97,7 @@
     padding-right: 10px;
     width: 100%;
     height: 100%;
+    font-size: 1rem;
 }
 
 .progress::before {
@@ -116,6 +122,6 @@
 .skills_name {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
     padding: 25px 0;
 }

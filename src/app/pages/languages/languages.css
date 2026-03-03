@@ -1,0 +1,43 @@
+/* ------ MAIN LANGUAGES ------ */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 30px black;
+}
+
+.tarjeta:hover {
+    background-color: var(--color-enfasis1);
+}
+
+.iconos_lan {
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.languages {
+    height: 205px;
+    width: 200px;
+    justify-content: center;
+    gap: 25px;
+    transition: 0.5s;
+}
+
+.languages:hover {
+    transform: scale(1.2);
+    color: var(--color-text-black);
+}
+
+.languages i {
+    font-size: 2rem;
+}

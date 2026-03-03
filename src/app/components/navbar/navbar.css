@@ -1,13 +1,17 @@
 .header_navbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-enfasis1);
+    /* background-color: var(--color-enfasis1); */
     padding: 20px;
     margin: 20px;
     border-radius: 30px;
     position: sticky;
     top: 5px;
     z-index: 1;
+    box-shadow:
+        0 0 4px var(--color-enfasis1),
+        0 0 10px var(--color-enfasis1),
+        0 0 25px var(--color-enfasis1);
 }
 
 h1 {
