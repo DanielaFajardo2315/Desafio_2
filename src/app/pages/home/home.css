@@ -56,6 +56,10 @@
 .wavy_border {
     border: var(--color-enfasis2) 5px dotted;
     animation: wavy 4s ease-in-out infinite;
+    box-shadow:
+        0 0 18px var(--color-enfasis2),
+        0 0 30px var(--color-enfasis2),
+        0 0 55px var(--color-enfasis2);
 }
 
 /* --- SECTION SKILLS --- */

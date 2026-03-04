@@ -14,11 +14,12 @@
     padding: 5px;
     padding-bottom: 10px;
     border-radius: 30px;
-    box-shadow: 2px 2px 30px black;
+    box-shadow: 2px 2px 30px var(--color-enfasis2);
 }
 
 .tarjeta:hover {
     background-color: var(--color-enfasis1);
+    color: var(--color-text-black);
 }
 
 .tarjeta img {
@@ -62,7 +63,7 @@
 
 .button {
     background-color: var(--color-enfasis1);
-    color: var(--color-text);
+    color: var(--color-text-black);
     text-decoration: none;
     padding: 15px;
     border-radius: 30px;
@@ -71,11 +72,12 @@
 
 .button:hover {
     background-color: var(--color-enfasis2);
+    color: var(--color-text);
 }
 
 .button_repository {
     background-color: var(--color-enfasis1);
-    color: var(--color-text);
+    color: var(--color-text-black);
     text-decoration: none;
     padding: 15px;
     border-radius: 30px;
@@ -83,7 +85,8 @@
 }
 
 .button_repository:hover {
-    background-color: var(--color-fondo);
+    background-color: var(--color-enfasis2);
+    color: var(--color-text);
 }
 
 .buttons_repository {

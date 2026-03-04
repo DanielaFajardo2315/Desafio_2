@@ -89,9 +89,13 @@ nav ul li a {
 
 /* ---- PESTAÑA ACTIVA ----- */
 nav ul li.active a {
-  color: var(--color-enfasis2);
+  color: var(--color-text-black);
   font-weight: bold;
   border-bottom: 2px solid var(--color-enfasis2);
+  text-shadow:
+        0 0 9px var(--color-enfasis2),
+        0 0 15px var(--color-enfasis2),
+        0 0 20px var(--color-enfasis2);
 }
 
 nav ul li.active {
