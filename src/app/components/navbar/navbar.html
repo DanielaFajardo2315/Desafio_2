@@ -1,36 +1,64 @@
-<div class="header_navbar">
+<div class="header_navbar navbar navbar-expand-lg">
+  <div class="container-fluid">
     <div class="icon_name">
-        <a routerLink="/">
-          <img src="assets/avatar.png" alt="Avatar de mujer" class="img_header" />
-        </a>
-        <h1>Daniela Fajardo</h1>
-      </div>
-      <nav>
-        <ul>
-          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/"
-              ><i class="bi bi-house-door-fill"></i>
-              <br />Home</a
-            >
-          </li>
-          <li routerLinkActive="active">
-            <a routerLink="/about"
-              ><i class="bi bi-person-badge"></i>
-              <br />About</a
-            >
-          </li>
-          <li routerLinkActive="active">
-            <a routerLink="/projects">
-              <i class="bi bi-collection-fill"></i>
-              <br />Projects
-            </a>
-          </li>
-          <li routerLinkActive="active">
-            <a routerLink="/languages">
-              <i class="bi bi-code-slash"></i>
-              <br />Programming <br />Languages
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <a routerLink="/">
+        <img src="assets/avatar.png" alt="Avatar de mujer" class="img_header" />
+      </a>
+      <h1>Daniela Fajardo</h1>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+          <a routerLink="/" class="nav-link active"><i class="bi bi-house-door-fill"></i>
+            <br />{{ ts.translate('nav.home') }}</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/about" class="nav-link active"><i class="bi bi-person-badge"></i>
+            <br />{{ ts.translate('nav.about') }}</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/projects" class="nav-link active">
+            <i class="bi bi-collection-fill"></i>
+            <br />{{ ts.translate('nav.projects') }}
+          </a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/languages" class="nav-link active">
+            <i class="bi bi-code-slash"></i>
+            <br />{{ ts.translate('nav.languages') }}
+          </a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link" (click)="toggleDropdown(); $event.stopPropagation()" role="button">
+            <i class="bi bi-globe"></i>
+            <br />{{ ts.translate('common.language') }}
+          </a>
+          <ul class="dropdown-menu" [class.show]="isDropdownOpen">
+            <li>
+              <a class="dropdown-item" (click)="changeLanguage('es')" [class.active]="ts.getLanguage() === 'es'"
+                role="button">
+                <span [style.visibility]="ts.getLanguage() === 'es' ? 'visible' : 'hidden'">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                {{ ts.translate('common.spanish') }}
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="changeLanguage('en')" [class.active]="ts.getLanguage() === 'en'"
+                role="button">
+                <span [style.visibility]="ts.getLanguage() === 'en' ? 'visible' : 'hidden'">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                {{ ts.translate('common.english') }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>

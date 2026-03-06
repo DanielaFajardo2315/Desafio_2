@@ -73,9 +73,6 @@
   font-size: large;
   border-radius: 20px;
   position: relative;
-  /* border: 3px solid transparent;
-  background-clip: padding-box;
-  background-color: transparent; */
 }
 
 .hobbies::before {
@@ -448,4 +445,34 @@ hr {
 
 .edu_tarjeta:hover h5 {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .profile h2 {
+    margin-bottom: 10px;
+  }
+
+  .profile_description {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .foto {
+    margin: 10px auto;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .hobbies {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .cont_edu {
+    flex-direction: column;
+  }
+
+  .contenedor_education {
+    width: 80vw;
+  }
 }

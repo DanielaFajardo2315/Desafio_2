@@ -1,13 +1,15 @@
 .header_navbar {
     display: flex;
     justify-content: space-between;
-    /* background-color: var(--color-enfasis1); */
-    padding: 20px;
-    margin: 20px;
+    background-color: var(--color-fondo);
+    padding: 10px;
+    margin: 0 20px;
     border-radius: 30px;
-    position: sticky;
-    top: 5px;
-    z-index: 1;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 100;
     box-shadow:
         0 0 4px var(--color-enfasis1),
         0 0 10px var(--color-enfasis1),
@@ -80,6 +82,7 @@ nav ul {
 
 nav ul li {
     text-align: center;
+    width: 6.2vw;
 }
 
 nav ul li a {
@@ -100,4 +103,70 @@ nav ul li.active a {
 
 nav ul li.active {
   border-radius: 12px;
+}
+
+.nav-item .dropdown-menu {
+  display: none;
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-enfasis1);
+  border-radius: 30px;
+  padding: 6px 12px;
+  box-shadow:
+    0 0 4px var(--color-enfasis1),
+    0 0 10px var(--color-enfasis1);
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 100%;
+  min-width: 140px;
+  z-index: 200;
+}
+
+.nav-item .dropdown-menu.show {
+  display: block;
+}
+
+.nav-item .dropdown-menu .dropdown-item {
+  color: var(--color-text);
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: var(--color-opaco1);
+  color: var(--color-enfasis1);
+}
+
+.nav-item .dropdown-menu .dropdown-item.active {
+  background-color: var(--color-opaco2);
+  color: var(--color-text);
+  font-weight: bold;
+  text-shadow:
+    0 0 9px var(--color-enfasis2),
+    0 0 15px var(--color-enfasis2);
+}
+
+@media (max-width: 768px) {
+    .icon_name a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .img_header {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon_name a::before {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
 }

@@ -1,7 +1,9 @@
 /* ------ MAIN CONTACT ------ */
 .title {
-    margin: 25px;
+    margin: 25px auto;
+    margin-bottom: 5px;
     padding: 10px;
+    width: 80%;
 }
 
 .title h2 {
@@ -10,28 +12,60 @@
     padding: 15px;
 }
 
+.title p>a {
+    text-decoration: none;
+    color: inherit;
+    animation: glowPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 9px var(--color-enfasis1),
+            0 0 15px var(--color-enfasis1),
+            0 0 20px var(--color-enfasis1);
+        ;
+    }
+
+    100% {
+        text-shadow: 0 0 9px var(--color-enfasis2),
+            0 0 15px var(--color-enfasis2),
+            0 0 20px var(--color-enfasis2);
+        ;
+    }
+}
+
 .formulario {
     display: flex;
     justify-content: center;
 }
 
 form {
-    background-color: var(--color-enfasis1);
+    background: linear-gradient(135deg, var(--color-opaco1), var(--color-opaco2));
     padding: 40px;
     border-radius: 30px;
     margin-bottom: 20px;
+    min-width: 250px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 20px 20px 20px;
 }
 
 form:hover {
-    box-shadow: 10px 10px 20px black;
+    box-shadow: 5px 5px 10px black;
 }
 
 form input {
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--color-text);
     padding: 2px;
-    width: 300px;
-    font-family: 'Luckiest Guy', sans-serif;
+    width: 100%;
+    font-family: var(--font);
+    border: 1px solid var(--color-enfasis1);
+}
+
+form input:focus {
+    outline: none;
+    border: 2px solid var(--color-enfasis2);
 }
 
 .descrip {
@@ -39,7 +73,6 @@ form input {
 }
 
 .btn_send {
-    font-family: 'Luckiest Guy', sans-serif;
     width: 100px;
     height: 30px;
     border-radius: 30px;
@@ -51,4 +84,5 @@ form input {
 
 .btn_send:hover {
     background-color: var(--color-enfasis2);
+    color: var(--color-text);
 }

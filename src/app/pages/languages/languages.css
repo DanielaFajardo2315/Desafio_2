@@ -1,13 +1,106 @@
 /* ------ MAIN LANGUAGES ------ */
+h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+h2 span {
+    display: block;
+    background: var(--color-enfasis2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h3 {
+    text-align: center;
+}
+
+.sect_contenedor {
+    margin: 30px auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 30px;
+    /* ---- */
+    background: var(--color-opaco1);
+    border: 2px solid var(--color-enfasis1);
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.6s ease both;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sect_contenedor:hover {
+    transform: translateY(-2px);
+}
+
+.sect_contenedor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.sect_contenedor::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    top: -60px;
+    right: -60px;
+    opacity: 0.12;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+.sect_contenedor.style_cont {
+    border-color: var(--color-opaco1);
+    background: linear-gradient(135deg, var(--color-opaco1), var(--color-opaco2));
+}
+
+.sect_contenedor.style_cont::before {
+    background: var(--color-enfasis1);
+}
+
+.sect_contenedor.style_cont::after {
+    background: var(--color-opaco2);
+}
+
+.sect_contenedor.style_cont:hover {
+    border-color: var(--color-enfasis1);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 40px;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
 }
 
 .tarjeta {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     width: auto;
     margin: 15px;
@@ -22,12 +115,12 @@
 
 .iconos_lan {
     justify-items: center;
-    margin-bottom: 20px;
 }
 
 .languages {
-    height: 205px;
-    width: 200px;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
     justify-content: center;
     gap: 25px;
     transition: 0.5s;

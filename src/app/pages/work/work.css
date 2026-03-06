@@ -2,7 +2,6 @@
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 40px;
 }
 
 .tarjeta {
@@ -92,4 +91,10 @@
 .buttons_repository {
     display: flex;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
 }
