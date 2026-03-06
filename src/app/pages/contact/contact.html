@@ -1,10 +1,10 @@
 <section class="title">
   <h2>{{ ts.translate('contact.title') }}</h2>
   <p>{{ ts.translate('contact.description') }}</p>
-  <p>{{ ts.translate('contact.whatsapp') }} <a href="http://wa.me/573194787444" target="_blank">WhatsApp.</a></p>
+  <p>{{ ts.translate('contact.whatsapp') }} <a href="http://wa.me/573053706371" target="_blank">WhatsApp.</a></p>
 </section>
 <section class="formulario">
-  <form>
+  <form (submit)="onSubmit($event)">
     <label for="name">{{ ts.translate('contact.name') }}</label>
     <br />
     <input type="text" name="name" [placeholder]="ts.translate('contact.namePlaceholder')" required />
@@ -21,6 +21,14 @@
     <br />
     <input class="descrip" type="text" name="text" [placeholder]="ts.translate('contact.messagePlaceholder')" />
     <br><br>
-    <button class="btn_send" type="submit">{{ ts.translate('contact.send') }}</button>
+    <button class="btn_send" type="submit" [disabled]="loading">
+      {{ loading ? 'Enviando...' : ts.translate('contact.send') }}
+    </button>
+    @if (success) {
+      <p style="color: green; margin-top: 1rem;">✅ Mensaje enviado correctamente.</p>
+    }
+    @if (error) {
+      <p style="color: red; margin-top: 1rem;">❌ {{ error }}</p>
+    }
   </form>
 </section>
