@@ -29,9 +29,9 @@ exports.handler = async (event) => {
     }
 
     await resend.emails.send({
-      from: 'Formulario Web <onboarding@resend.dev>', // reemplaza con tu dominio verificado
-      to: 'tu@email.com',                             // tu correo donde recibes los mensajes
-      reply_to: email,                                // al responder le escribes directo al cliente
+      from: 'onboarding@resend.dev', 
+      to: 'danielafajardo2315@gmail.com',     
+      reply_to: email,     
       subject: `Nuevo contacto de ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 500px; margin: auto;">
