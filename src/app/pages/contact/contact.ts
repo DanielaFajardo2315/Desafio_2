@@ -41,7 +41,7 @@ export class Contact {
       },
       error: () => {
         this.loading = false;
-        this.error = 'Hubo un error al enviar el mensaje. Intenta nuevamente.';
+        this.error = this.ts.translate('contact.error');
       },
     });
   }

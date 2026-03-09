@@ -22,13 +22,13 @@
     <input class="descrip" type="text" name="text" [placeholder]="ts.translate('contact.messagePlaceholder')" />
     <br><br>
     <button class="btn_send" type="submit" [disabled]="loading">
-      {{ loading ? 'Enviando...' : ts.translate('contact.send') }}
+      {{ loading ? ts.translate('contact.loading') : ts.translate('contact.send') }}
     </button>
     @if (success) {
-      <p style="color: green; margin-top: 1rem;">✅ Mensaje enviado correctamente.</p>
+      <p style="margin-top: 1rem;">✅ {{ts.translate('contact.success')}}</p>
     }
     @if (error) {
-      <p style="color: red; margin-top: 1rem;">❌ {{ error }}</p>
+      <p style="color: red; margin-top: 1rem;">❌ {{ ts.translate('contact.error') }}</p>
     }
   </form>
 </section>

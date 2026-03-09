@@ -57,6 +57,9 @@ export const translations = {
       phonePlaceholder: 'Escribe tu teléfono',
       emailPlaceholder: 'Escribe tu correo',
       messagePlaceholder: 'Escribe algo que quieras contarme',
+      loading: 'Enviando...',
+      success: 'Mensaje enviado correctamente.',
+      error: 'Hubo un error al enviar el mensaje. Intenta nuevamente.',
     },
     languages: {
       title: 'Técnico',
@@ -151,6 +154,9 @@ export const translations = {
       phonePlaceholder: 'Write your phone',
       emailPlaceholder: 'Write your e-mail',
       messagePlaceholder: 'Write something you want to tell me',
+      loading: 'Sending...',
+      success: 'Message sent successfully.',
+      error: 'There was an error sending the message. Please try again.',
     },
     languages: {
       title: 'Stack',
