@@ -2,6 +2,16 @@ main {
     padding-top: 170px;
 }
 
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main, router-outlet + * {
+  flex: 1;
+}
+
 @media (max-width: 768px) {
     main {
         padding-top: 120px;

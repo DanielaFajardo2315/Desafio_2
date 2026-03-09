@@ -5,7 +5,7 @@
     --color-fondo: #2d396a;
     --color-enfasis1: #81c3bd;
     --color-enfasis2: #684CA0;
-    --color-text: rgb(212, 212, 212);
+    --color-text: #d4d4d4;
     --color-text-black: black;
     --color-opaco1: rgba(129, 195, 189, 0.4);
     --color-opaco2: rgba(104, 76, 160, 0.4);
@@ -21,4 +21,15 @@ body {
     font-family: var(--font);
     background-color: var(--color-fondo);
     color: var(--color-text);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

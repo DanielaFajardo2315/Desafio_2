@@ -1,5 +1,10 @@
 <div class="not-found-container">
   <h1>{{ ts.translate('notFound.title') }}</h1>
-  <p>{{ ts.translate('notFound.message') }}</p>
-  <a routerLink="/" class="btn btn-primary">{{ ts.translate('notFound.backHome') }}</a>
+  <div class="contenedor">
+    <img src="/assets/not_found.png" alt="Cables desenchufados">
+    <div>
+      <p class="text_not">{{ ts.translate('notFound.message') }}</p>
+      <a routerLink="/" class="button">{{ ts.translate('notFound.backHome') }}</a>
+    </div>
+  </div>
 </div>
